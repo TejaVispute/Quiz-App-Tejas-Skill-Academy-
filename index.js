@@ -13,7 +13,11 @@ const timecount = document.querySelector("#timer");
 const score = document.querySelector("#score");
 const result = document.querySelector(".result-container");
 let username = document.querySelector(".input-val").value;
-
+const next_button = QuestionBox.querySelector(".btn");
+let qu_count = 0;
+let qu_numb = 1;
+let counter;
+let userscore = 0;
 
 // if continue button clicked
 Continue.onclick = () => {
@@ -31,8 +35,9 @@ printname = () => {
   const val = document.querySelector(".input-val").value;
   document.querySelector("#displayname").innerHTML = "Welcome " + val;
   document.querySelector(".name").innerHTML = val;
- 
+
 };
+
 
 // for adding question of probabilities
 probab.onclick = () => {
@@ -40,35 +45,13 @@ probab.onclick = () => {
   QuestionBox.classList.add("activeQuiz"); //for showing question section
   document.querySelector(".title-bar").innerHTML = "PROBABILITY";
   showQuestion(0);
+  
   queCounter(1);
   startTimer(300);
   printname();
 };
 
-// pipe.onclick = () => {
-//     categories.classList.remove("activeinfo");
-//     QuestionBox.classList.add("activeQuiz"); //for showing question section
-// };
-// ages.onclick = () => {
-//     categories.classList.remove("activeinfo");
-//     QuestionBox.classList.add("activeQuiz"); //for showing question section
-// };
-// profit_loss.onclick = () => {
-//     categories.classList.remove("activeinfo");
-//     QuestionBox.classList.add("activeQuiz"); //for showing question section
-// };
-
-let qu_count = 0;
-let qu_numb = 1;
-let counter;
-let userscore = 0;
-
-const result_box = document.querySelector(".result-container");
-const restart = document.querySelector(".restart");
-const home = document.querySelector(".home");
-
-// next button accessed here
-const next_button = QuestionBox.querySelector(".btn");
+// change probabilities questions
 next_button.onclick = () => {
   if (qu_count < PROBABILITY.length - 1) {
     qu_count++;
@@ -83,7 +66,10 @@ next_button.onclick = () => {
   }
 };
 
-// accessed questions and print here
+
+
+
+// accessed questions and print here of probability
 showQuestion = (index) => {
   const question_text = document.querySelector(".Question");
 
@@ -115,6 +101,7 @@ showQuestion = (index) => {
   }
 };
 
+
 function optionSelected(answer) {
   let userAns = answer.textContent;
   let correctAns = PROBABILITY[qu_count].answer;
@@ -143,6 +130,155 @@ function optionSelected(answer) {
   next_button.classList.add("show");
 }
 
+
+
+
+
+
+
+
+
+// Pipes and critstrens questions change using next btn
+
+pipe.onclick = () => {
+  categories.classList.remove("activeinfo");
+  QuestionBox.classList.add("activeQuiz"); //for showing question section
+  document.querySelector(".title-bar").innerHTML = "Pipes and Cristrens";
+  showQuestionpipe(0);
+  queCounter(1);
+  startTimer(300);
+  printname();
+};
+
+next_button.onclick = () => {
+  if (qu_count < PIPES.length - 1) {
+    qu_count++;
+    qu_numb++;
+    score.innerHTML = "score: " + userscore;
+    showQuestionpipe(qu_count);
+    queCounter(qu_numb);
+    next_button.classList.remove("show");
+  } else {
+    console.log("questons are completed");
+    showResultBox();
+  }
+};
+
+showQuestionpipe = (index) => {
+  const question_text = document.querySelector(".Question");
+
+  let qu_tag =
+    "<span>" +
+    PIPES[index].numb +
+    ". " +
+    PIPES[index].question +
+    "</span>";
+  let option_tag =
+    '<span class="option">' +
+    PIPES[index].option[0] +
+    "</span>" +
+    '<span class="option">' +
+    PIPES[index].option[1] + //add loops here
+    "</span>" +
+    '<span class="option">' +
+    PIPES[index].option[2] +
+    "</span>" +
+    '<span class="option">' +
+    PIPES[index].option[3] +
+    "</span>";
+
+  question_text.innerHTML = qu_tag;
+  answer_options.innerHTML = option_tag;
+  const option = answer_options.querySelectorAll(".option");
+  for (let i = 0; i < option.length; i++) {
+    option[i].setAttribute("onclick", "optionSelected(this)"); //adding onclick event on options
+  }
+};
+
+
+function optionSelected(answer) {
+  let userAns = answer.textContent;
+  let correctAns = PIPES[qu_count].answer;
+  let alloptions = answer_options.children.length;
+  if (userAns == correctAns) {
+    answer.classList.add("correctAns");
+    userscore += 1;
+    console.log("Answer is correct"); //if answer is correct background color of answer will be green
+  } else {
+    answer.classList.add("incorrectAns");
+    console.log("Answer is wrong"); // if answer is wrong background color will be red.
+
+    for (let i = 0; i < alloptions; i++) {
+      if (answer_options.children[i].textContent == correctAns) {
+        answer_options.children[i].classList.add("correctAns");
+        console.log("working");
+      }
+    }
+  }
+
+  // once user click one option disable all other options
+  for (let i = 0; i < alloptions; i++) {
+    answer_options.children[i].classList.add("disabled");
+  }
+
+  next_button.classList.add("show");
+}
+
+
+
+
+
+
+// ages.onclick = () => {
+//   categories.classList.remove("activeinfo");
+//   QuestionBox.classList.add("activeQuiz"); //for showing question section
+//   document.querySelector(".title-bar").innerHTML = "Ages";
+//   showQuestion(0);
+//   queCounter(1);
+//   startTimer(300);
+//   printname();
+// };
+
+// profit_losses.onclick = () => {
+//   categories.classList.remove("activeinfo");
+//   QuestionBox.classList.add("activeQuiz"); //for showing question section
+//   document.querySelector(".title-bar").innerHTML = "profit_losses";
+//   showQuestion(0);
+//   queCounter(1);
+//   startTimer(300);
+//   printname();
+// };
+
+
+
+
+const result_box = document.querySelector(".result-container");
+const restart = document.querySelector(".restart");
+const home = document.querySelector(".home");
+
+// next button accessed here with probablity questions
+
+
+
+
+
+
+
+
+
+// show pipes questions
+
+
+
+
+
+
+
+
+
+
+
+
 // Timer of 300 seconds
 function startTimer(time) {
   counter = setInterval(timer, 1000);
@@ -160,6 +296,8 @@ function queCounter(index) {
   top_question_count.innerHTML = totalQuestioncount;
 }
 
+
+
 // Show Result Box
 
 function showResultBox() {
@@ -172,6 +310,8 @@ function showResultBox() {
   const correct = document.querySelector(".correct");
   const wrong = document.querySelector(".wrong");
   const Percentage = document.querySelector(".Percentage");
-  nameTag= '<span>'+username +"your result is" +'</span>'
-  name.innerHTML=nameTag;
+  let username = document.querySelector(".input-val").value;
+  nameTag = '<span>' + username + " your result is" + '</span>'
+  name.innerHTML = nameTag;
+
 }

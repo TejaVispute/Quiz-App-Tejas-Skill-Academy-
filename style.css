@@ -5,6 +5,14 @@
   font-family: "Trirong", serif;
 }
 
+body{
+  /* background:url(https://www.leadquizzes.com/wp-content/uploads/2019/02/New-blog-graphic.jpg); */
+  background:url(https://images.squarespace-cdn.com/content/v1/57053322f85082aac8d940ad/1616153854712-QAFMLCHZG0D1W03Q3PAP/Q+AND+A.jpg?format=1500w);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center/cover;
+}
 .rules,
 .info-box,
 .categories-box,
