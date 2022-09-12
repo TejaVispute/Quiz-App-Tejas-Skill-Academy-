@@ -1,0 +1,711 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Trirong", serif;
+}
+
+.rules,
+.info-box,
+.categories-box,
+.Question-box,
+.result-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.categories-box.activeinfo,
+.Question-box.activeQuiz,
+.result-container.activeResult{
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* information box container  starts here*/
+.info-box {
+  width: 600px;
+  height: 350px;
+  border: 0.5px solid grey;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  -moz-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  border-radius: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.disp {
+  display: none;
+  /* externally adding this css for removing and adding things */
+}
+
+/* Rules secton */
+.heading h3 {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.rules {
+  margin: 10px 0px;
+  width: 100%;
+  padding: 30px;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btns button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #2dade2;
+}
+
+.btns button:hover {
+  background-color: #2dade2;
+  color: white;
+}
+
+.color {
+  color: #0099ff;
+  font-weight: bold;
+}
+
+/* @media only screen and (max-width: 600px) {
+    .box {
+        width: 100vw;
+        height: auto;
+    }
+
+    .heading h2 {
+        font-size: 18px;
+    }
+
+    .rules {
+        text-align: justify;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .box {
+        width: 80vw;
+    }
+
+    .rules {
+        text-align: justify;
+    }
+} */
+
+/* information box container  Ends here*/
+
+/* Categories select here */
+
+.categories-box {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 45vw;
+  height: auto;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  -moz-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  border-radius: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.5s ease-in;
+}
+
+/* logo for quiz app */
+.logo img {
+  width: 70px;
+  object-fit: cover;
+  margin-top: 5px;
+}
+
+.upper-section h2 {
+  font-size: 19px;
+}
+
+/* input section targated here */
+.user-input {
+  display: flex;
+}
+
+/* input section styled here with padding, width etc.  */
+.user-input .enter-name input[type="text"] {
+  width: 30vw;
+  padding: 10px 5px;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+/* submit button for input section  */
+.submit-name button {
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 10px 20px;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* instructions section */
+.instructions {
+  margin-top: 10px;
+}
+
+/* linebreak between bottom section and mid section */
+.line {
+  width: 40vw;
+  margin-top: 10px;
+  border: 0.1px solid lightgrey;
+}
+
+/* bottom select category buttons styled here  */
+.btn-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* catagory */
+.header-style {
+  font-size: 22px;
+  color: #2dade2;
+  margin-top: 7px;
+}
+
+/* 4 buttons created for question category */
+.btn-bottom button {
+  width: 20vw;
+  height: 7vh;
+  border: 1px solid #2dade2;
+  padding: 10px;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: 0.3s ease-in;
+}
+
+/* hover effect added to the buttons */
+.btn-bottom button:hover {
+  background-color: #2dade2;
+  color: whitesmoke;
+}
+
+/* next and previus buttons styled here */
+.bottom-section button {
+  margin-top: 10px;
+}
+
+.backbtn button {
+  padding: 5px 15px;
+  border: 1px solid #2dade2;
+  border-radius: 10px;
+  margin-bottom: 7px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.backbtn button:hover {
+  background-color: #2dade2;
+  color: whitesmoke;
+}
+
+/* extra small device */
+ @media only screen and (max-width: 400px) {
+    .inside-box {
+      width: 90%;
+      height: auto;
+    }
+  
+    .logo img {
+      width: 30px;
+      object-fit: cover;
+    }
+  
+    .upper-section h2 {
+      font-size: 12px;
+    }
+  
+    .user-input {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .user-input .enter-name input[type="text"] {
+      padding: 8px;
+      width: 60vw;
+    }
+  
+    .submit-name button {
+      padding: 3px;
+      width: 20vw;
+    }
+  
+    .heading-bottom h2 {
+      font-size: 14px;
+    }
+  
+    .instructions {
+      font-size: 17px;
+    }
+  
+    .line {
+      margin-top: 0px;
+      width: 80%;
+  
+    }
+  
+    .btn-bottom {
+      grid-template-columns: 1fr;
+      margin-bottom: 10px;
+    }
+  
+    .btn-bottom button {
+      width: 80vw;
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+    .logo img {
+      margin-top: 10px;
+    }
+  
+  }
+  
+  /* for mobile device added this media query*/
+
+ @media only screen and (max-width: 600px) {
+    .categories-box {
+      width: 80%;
+      height: 85%;
+    }
+  
+    .logo img {
+      width: 70px;
+      object-fit: cover;
+    }
+  
+    .upper-section h2 {
+      font-size: 20px;
+    }
+  
+    .user-input {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .user-input .enter-name input[type="text"] {
+      padding: 5px;
+      width: 50vw;
+    }
+  
+    .submit-name button {
+      padding: 5px;
+      width: 20vw;
+    }
+  
+    .heading-bottom h2 {
+      font-size: 16px;
+    }
+  
+    .instructions {
+      font-size: 14px;
+    }
+  
+    .line {
+      margin-top: 0px;
+      width: 80%;
+  
+    }
+  
+    .btn-bottom {
+      grid-template-columns: 1fr;
+    }
+  
+    .btn-bottom button {
+      width: 60vw;
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .logo img {
+      margin-top: 10px;
+    }
+  
+  } 
+
+/* media queries for mobile devices ends here */
+
+/* media queries for ipad devices starts here */
+
+ @media only screen and (max-width: 900px) {
+    .categories-box {
+      width: 80%;
+      height: auto;
+    }
+  
+    .logo img {
+      width: 70px;
+      object-fit: cover;
+    }
+  
+    .upper-section h2 {
+      font-size: 20px;
+    }
+  
+    .user-input {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .user-input .enter-name input[type="text"] {
+      padding: 10px;
+      width: 60vw;
+    }
+  
+    .submit-name button {
+      padding: 5px;
+      width: 20vw;
+    }
+  
+    .heading-bottom h2 {
+      font-size: 16px;
+    }
+  
+    .instructions {
+      font-size: 17px;
+    }
+  
+    .line {
+      margin-top: 0px;
+      width: 80%;
+  
+    }
+  
+    .btn-bottom {
+      grid-template-columns: 1fr;
+      margin-bottom: 10px;
+    }
+  
+    .btn-bottom button {
+      width: 60vw;
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .logo img {
+      margin-top: 10px;
+    }
+  
+  } 
+/* media queries for ipad devices ends here */
+/* Categories select here */
+
+/* Question-Box Container Starts here */
+.Question-box {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 60vw;
+  height: auto;
+  border: 2px solid #ccc;
+  padding: 30px;
+  background-color: white;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  -moz-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  border-radius: 10px;
+  border-radius: 30px;
+  transition: all 0.5s ease-in;
+}
+
+/* questions of which topic */
+.title-bar {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Timer of 10 seconds styled here */
+.score-timer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* score of correct questions */
+#score {
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/* Timer 00 seconds styled here */
+#timer {
+  border-radius: 50%;
+  border: 2px solid rgb(51, 181, 233);
+  padding: 10px;
+  color: rgb(51, 181, 233);
+  font-weight: bolder;
+}
+
+fieldset {
+  border: 2px solid rgb(236, 207, 133);
+  text-align: justify;
+  border-radius: 12px;
+}
+
+/* questions displayed in here */
+legend {
+  padding: 10px;
+  border: 2px solid rgb(236, 207, 133);
+  border-radius: 30px;
+  text-align: center;
+}
+
+.Question {
+  padding: 30px;
+}
+
+/* answer options container styled here*/
+.answer-options {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  text-align: center;
+  font-size: 17px;
+}
+
+/* answer 4 buttons styled here */
+.answer-options span {
+  border: 2px solid rgb(99, 204, 245);
+  color: rgb(51, 181, 233);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s ease-in;
+}
+
+.answer-options .correctAns {
+  background-color: green;
+  color: white;
+  border-color: white;
+}
+
+.answer-options .incorrectAns {
+  background-color: tomato;
+  color: white;
+  border-color: white;
+}
+
+.answer-options .disabled {
+  pointer-events: none;
+}
+
+/* next button style starts here */
+.next-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.next-button button {
+  padding: 10px 20px;
+  border: 1px solid rgb(99, 204, 245);
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.next-button button.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.next-button button:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+
+/* next button style ends here */
+
+
+/* For Questions and answer This css is added */
+ @media only screen and (max-width: 800px) {
+    .answer-options {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .Question-box{
+      width: 80vw;
+    }
+
+
+    fieldset {
+        margin-bottom: 10px;
+    }
+
+    .box {
+        height: auto;
+        width: 80vw;
+    }
+
+    .title-bar h2 {
+        font-size: 17px;
+    }
+
+    .Question {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .answer-options {
+        margin-top: 0px;
+    }
+
+    .next-button button {
+        width: 100px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #timer {
+        border-radius: 50px;
+        font-size: 15px;
+    }
+
+    #score {
+        border-radius: 50px;
+        font-size: 15px;
+    }
+
+
+} 
+
+@media only screen and (max-width: 600px) {
+    .answer-options {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .Question-box{
+      width: 90vw;
+    }
+
+    .box {
+        width: 90%;
+        height: auto;
+    }
+
+    .title-bar h2 {
+        font-size: 17px;
+    }
+
+    .Question {
+        font-size: 14px;
+    }
+
+    .answer-options {
+        margin-top: 0px;
+    }
+
+    .next-button button {
+        width: 100px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #timer {
+        border-radius: 50px;
+        font-size: 15px;
+    }
+
+    #score {
+        border-radius: 50px;
+        font-size: 15px;
+    }
+} 
+
+/* Question-Box Container Ends here */
+
+
+
+/* Result section Styled here */
+
+.result-container {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 40vw;
+  height: 60vh;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  -moz-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid grey;
+  transition: all 0.3s ease-in;
+}
+
+.buttons button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-style: hidden;
+  background-color: #0099ff;
+}
+
+.buttons button:hover {
+  background-color: #0099ff;
+  color: white;
+}
+
+.result-container h2 {
+  font-family: cursive;
+  color: rgb(78, 167, 240);
+  border-bottom: 0.1px solid grey;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 7px;
+}
+
+@media only screen and (max-width: 600px) {
+  .result-container{
+    width: 90vw;
+  }
+  }
+@media only screen and (max-width: 800px) {
+  .result-container{
+    width: 80vw;
+  }
+  }
