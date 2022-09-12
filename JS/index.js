@@ -6,7 +6,7 @@ const backbutton = document.querySelector(".backbtn button");
 const probab = document.querySelector(".probab");
 const pipe = document.querySelector(".pipe");
 const ages = document.querySelector(".ages");
-const profit_loss = document.querySelector(".profit_loss");
+const profit = document.querySelector(".profit_loss");
 const QuestionBox = document.querySelector(".Question-box");
 let answer_options = document.querySelector(".answer-options");
 const timecount = document.querySelector("#timer");
@@ -150,6 +150,9 @@ function startTimer(time) {
 }
 
 // top question count increment after every next button clicked
+
+
+
 
 // Show Result Box At the end
 function showResultBox() {

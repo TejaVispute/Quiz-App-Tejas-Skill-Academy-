@@ -397,7 +397,7 @@ const Ages = [
 ];
 
 
-const PROFITS_AND_LOSSES = [
+const PROFIT = [
   {
     numb: 1,
     question:
