@@ -263,8 +263,9 @@ const PIPES = [
 
   },
 ];
-const PROBLEMS_ON_AGES = [
+const Ages = [
   {
+    numb: 1,
     question:
       "The sum of ages of 5 children born at the intervals of 3 years each is 50 years. What is the age of the youngest child?",
     answer: "4 years",
@@ -277,6 +278,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 2,
     question:
       "A is two years older than B who is twice as old as C. If the total of the ages of A, B and C be 27, then how old is B?",
     answer: "10",
@@ -289,6 +291,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 3,
     question:
       "Present ages of Sameer and Anand are in the ratio of 5 : 4 respectively. Three years hence, the ratio of their ages will become 11 : 9 respectively. What is Anand's present age in years?",
     answer: "24",
@@ -301,6 +304,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 4,
     question:
       "A man is 24 years older than his son. In two years, his age will be twice the age of his son. The present age of his son is:",
     answer: "22",
@@ -313,6 +317,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 5,
     question:
       "Six years ago, the ratio of the ages of Kunal and Sagar was 6 : 5. Four years hence, the ratio of their ages will be 11 : 10. What is Sagar's age at present?",
     answer: "16",
@@ -325,6 +330,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 6,
     question:
       "The sum of the present ages of a father and his son is 60 years. Six years ago, father's age was five times the age of the son. After 6 years, son's age will be:",
     answer: "20",
@@ -337,6 +343,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 7,
     question:
       "At present, the ratio between the ages of Arun and Deepak is 4 : 3. After 6 years, Arun's age will be 26 years. What is the age of Deepak at present ?",
     answer: "15",
@@ -349,6 +356,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 8,
     question:
       "Sachin is younger than Rahul by 7 years. If their ages are in the respective ratio of 7 : 9, how old is Sachin?",
     answer: "24.5",
@@ -361,6 +369,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 9,
     question:
       "Ayesha's father was 38 years of age when she was born while her mother was 36 years old when her brother four years younger to her was born. What is the difference between the ages of her parents?",
     answer: "6",
@@ -373,6 +382,7 @@ const PROBLEMS_ON_AGES = [
 
   },
   {
+    numb: 10,
     question:
       "A person's present age is two-fifth of the age of his mother. After 8 years, he will be one-half of the age of his mother. How old is the mother at present?",
     answer: "40",
@@ -385,8 +395,11 @@ const PROBLEMS_ON_AGES = [
 
   },
 ];
+
+
 const PROFITS_AND_LOSSES = [
   {
+    numb: 1,
     question:
       "The cost price of 20 articles is the same as the selling price of x articles. If the profit is 25%, then the value of x is:",
     answer: "16",
@@ -399,6 +412,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 2,
     question:
       "A vendor bought toffees at 6 for a rupee. How many for a rupee must he sell to gain 20%?",
     answer: "5",
@@ -411,6 +425,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 3,
     question:
       "Sam purchased 20 dozens of toys at the rate of Rs. 375 per dozen. He sold each one of them at the rate of Rs. 33. What was his percentage profit?",
     answer: "5.6",
@@ -423,6 +438,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 4,
     question:
       "On selling 17 balls at Rs. 720, there is a loss equal to the cost price of 5 balls. The cost price of a ball is:",
     answer: "60",
@@ -435,6 +451,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 5,
     question:
       "By selling an article at Rs. 800, a shopkeeper makes a profit of 25%. At what price should he sell the article so as to make a loss of 25%?",
     answer: "480",
@@ -447,6 +464,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 6,
     question:
       "Profit after selling a commodity for Rs. 425 is same as loss after selling it for Rs.355. The cost of the commodity is:",
     answer: "390",
@@ -459,6 +477,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 7,
     question:
       "Bhajan Singh purchased 120 reams of paper at Rs. 80 per ream. He spent Rs. 280 on transportation. Paid octrai at the rate of 40 paise per ream and paid Rs. 72 to the coolie. If he wants to have a gain of 8 %. What must be the selling price per ream?",
     answer: "90",
@@ -472,6 +491,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 8,
     question:
       "A person sold a pen at Rs. 96 in such a way that his percentage profit is same as the cost price of the watch. If he sells it at twice the percentage profit of its previous percentage profit then new selling price will be?",
     answer: "132",
@@ -484,6 +504,7 @@ const PROFITS_AND_LOSSES = [
 
   },
   {
+    numb: 9,
     question:
       " The cost price of a radio is Rs.1500 and it was sold for Rs.1230, find the loss %?",
     answer: "18%",
@@ -495,6 +516,7 @@ const PROFITS_AND_LOSSES = [
     ],
   },
   {
+    numb: 10,
     question:
       "A watch was sold at a loss of 10%. If it was sold for Rs.140 more, there would have been a gain of 4%. What is the cost price?",
     answer: "1000",
