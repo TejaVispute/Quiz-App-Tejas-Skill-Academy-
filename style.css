@@ -5,14 +5,15 @@
   font-family: "Trirong", serif;
 }
 
-body{
+body {
   /* background:url(https://www.leadquizzes.com/wp-content/uploads/2019/02/New-blog-graphic.jpg); */
-  background:url(https://images.squarespace-cdn.com/content/v1/57053322f85082aac8d940ad/1616153854712-QAFMLCHZG0D1W03Q3PAP/Q+AND+A.jpg?format=1500w);
+  background: url(https://images.squarespace-cdn.com/content/v1/57053322f85082aac8d940ad/1616153854712-QAFMLCHZG0D1W03Q3PAP/Q+AND+A.jpg?format=1500w);
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center/cover;
 }
+
 .rules,
 .info-box,
 .categories-box,
@@ -26,7 +27,7 @@ body{
 
 .categories-box.activeinfo,
 .Question-box.activeQuiz,
-.result-container.activeResult{
+.result-container.activeResult {
   z-index: 5;
   opacity: 1;
   pointer-events: auto;
@@ -36,7 +37,7 @@ body{
 /* information box container  starts here*/
 .info-box {
   width: 600px;
-  height: 320px;
+  height: 350px;
   border: 0.5px solid grey;
   background-color: whitesmoke;
   -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
@@ -56,20 +57,38 @@ body{
 .heading h3 {
   text-align: center;
   padding: 10px;
-  border-bottom: 1px solid grey;
+  border-bottom: 2px dotted grey;
+  font-family: cursive;
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgb(17, 143, 178);
+
 }
 
 .rules {
-  margin: 10px 0px;
   width: 100%;
-  padding: 30px;
-  font-size: 18px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 15px;
+}
+
+.rules h3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  color: brown;
+  padding:10px;
+  font-family: cursive;
+  margin-top: 15px;
+}
+
+.rules p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .btns {
   display: flex;
-  justify-content: flex-end;
+  justify-content: right;
 }
 
 .btns button {
@@ -78,6 +97,7 @@ body{
   border-radius: 15px;
   transition: all 0.3s ease;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .btns button:hover {
@@ -182,7 +202,8 @@ body{
   transition: all 0.3s ease-in;
 
 }
-.submit-name button:hover{
+
+.submit-name button:hover {
   background-color: skyblue;
   color: white;
 }
@@ -252,7 +273,7 @@ body{
 }
 
 /* extra small device */
- @media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
     .inside-box {
       width: 90%;
       height: auto;
@@ -311,134 +332,135 @@ body{
       margin-top: 10px;
     }
   
-  }
-  
-  /* for mobile device added this media query*/
+  } */
 
- @media only screen and (max-width: 600px) {
-    .categories-box {
-      width: 80%;
-      height: 85%;
-    }
-  
-    .logo img {
-      width: 70px;
-      object-fit: cover;
-    }
-  
-    .upper-section h2 {
-      font-size: 20px;
-    }
-  
-    .user-input {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .user-input .enter-name input[type="text"] {
-      padding: 5px;
-      width: 50vw;
-    }
-  
-    .submit-name button {
-      padding: 5px;
-      width: 20vw;
-    }
-  
-    .heading-bottom h2 {
-      font-size: 16px;
-    }
-  
-    .instructions {
-      font-size: 14px;
-    }
-  
-    .line {
-      margin-top: 0px;
-      width: 80%;
-  
-    }
-  
-    .btn-bottom {
-      grid-template-columns: 1fr;
-    }
-  
-    .btn-bottom button {
-      width: 60vw;
-      padding: 10px;
-      font-size: 13px;
-    }
-  
-    .logo img {
-      margin-top: 10px;
-    }
-  
-  } 
+/* for mobile device added this media query*/
+
+@media only screen and (max-width: 600px) {
+  .categories-box {
+    width: 100vw;
+    height: auto;
+  }
+
+  .logo img {
+    width: 70px;
+    object-fit: cover;
+  }
+
+  .upper-section h2 {
+    font-size: 20px;
+  }
+
+  .user-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-input .enter-name input[type="text"] {
+    padding: 5px;
+    width: 50vw;
+  }
+
+  .submit-name button {
+    padding: 5px;
+    width: 20vw;
+  }
+
+  .heading-bottom h2 {
+    font-size: 16px;
+  }
+
+  .instructions {
+    font-size: 14px;
+  }
+
+  .line {
+    margin-top: 0px;
+    width: 80%;
+
+  }
+
+  .btn-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-bottom button {
+    width: 60vw;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .logo img {
+    margin-top: 10px;
+  }
+
+}
 
 /* media queries for mobile devices ends here */
 
 /* media queries for ipad devices starts here */
 
- @media only screen and (max-width: 900px) {
-    .categories-box {
-      width: 80%;
-      height: auto;
-    }
-  
-    .logo img {
-      width: 70px;
-      object-fit: cover;
-    }
-  
-    .upper-section h2 {
-      font-size: 20px;
-    }
-  
-    .user-input {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .user-input .enter-name input[type="text"] {
-      padding: 10px;
-      width: 60vw;
-    }
-  
-    .submit-name button {
-      padding: 5px;
-      width: 20vw;
-    }
-  
-    .heading-bottom h2 {
-      font-size: 16px;
-    }
-  
-    .instructions {
-      font-size: 17px;
-    }
-  
-    .line {
-      margin-top: 0px;
-      width: 80%;
-  
-    }
-  
-    .btn-bottom {
-      grid-template-columns: 1fr;
-      margin-bottom: 10px;
-    }
-  
-    .btn-bottom button {
-      width: 60vw;
-      padding: 10px;
-      font-size: 13px;
-    }
-  
-    .logo img {
-      margin-top: 10px;
-    }
-  
-  } 
+@media only screen and (max-width: 900px) {
+  .categories-box {
+    width: 80%;
+    height: auto;
+  }
+
+  .logo img {
+    width: 70px;
+    object-fit: cover;
+  }
+
+  .upper-section h2 {
+    font-size: 20px;
+  }
+
+  .user-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-input .enter-name input[type="text"] {
+    padding: 10px;
+    width: 60vw;
+  }
+
+  .submit-name button {
+    padding: 5px;
+    width: 20vw;
+  }
+
+  .heading-bottom h2 {
+    font-size: 16px;
+  }
+
+  .instructions {
+    font-size: 17px;
+  }
+
+  .line {
+    margin-top: 0px;
+    width: 80%;
+
+  }
+
+  .btn-bottom {
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+  }
+
+  .btn-bottom button {
+    width: 60vw;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .logo img {
+    margin-top: 10px;
+  }
+
+}
+
 /* media queries for ipad devices ends here */
 /* Categories select here */
 
@@ -466,7 +488,7 @@ body{
   border-bottom: 1px solid black;
   color: #2dade2;
   padding-bottom: 10px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 25px;
   text-align: center;
   font-weight: bolder;
@@ -496,10 +518,10 @@ body{
 }
 
 fieldset {
-  border: 2px solid rgb(236, 207, 133);
+  border: 3px solid rgb(98, 75, 17);
   text-align: justify;
   border-radius: 12px;
-  font-family:;
+
 }
 
 /* questions displayed in here */
@@ -511,13 +533,14 @@ legend {
 }
 
 .Question {
-  padding: 30px;
+  padding: 20px;
 }
 
-.Question span{
-  font-weight: bold;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.Question span {
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 /* answer options container styled here*/
 .answer-options {
   margin-top: 30px;
@@ -540,9 +563,9 @@ legend {
   font-weight: bolder;
 }
 
-.answer-options span:hover{
-border-color:green;
-}
+/* .answer-options span:hover{
+
+} */
 
 .answer-options .correctAns {
   background-color: green;
@@ -593,99 +616,101 @@ border-color:green;
 
 
 /* For Questions and answer This css is added */
- @media only screen and (max-width: 800px) {
-    .answer-options {
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
-    .Question-box{
-      width: 80vw;
-    }
+@media only screen and (max-width: 800px) {
+  .answer-options {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .Question-box {
+    width: 80vw;
+  }
 
 
-    fieldset {
-        margin-bottom: 10px;
-    }
+  fieldset {
+    margin-bottom: 10px;
+  }
 
-    .box {
-        height: auto;
-        width: 80vw;
-    }
+  .box {
+    height: auto;
+    width: 80vw;
+  }
 
-    .title-bar h2 {
-        font-size: 17px;
-    }
+  .title-bar h2 {
+    font-size: 17px;
+  }
 
-    .Question {
-        font-size: 14px;
-        padding: 20px;
-    }
+  .Question {
+    font-size: 14px;
+    padding: 20px;
+  }
 
-    .answer-options {
-        margin-top: 0px;
-    }
+  .answer-options {
+    margin-top: 0px;
+  }
 
-    .next-button button {
-        width: 100px;
-        font-size: 12px;
-        padding: 5px;
-    }
+  .next-button button {
+    width: 100px;
+    font-size: 12px;
+    padding: 5px;
+  }
 
-    #timer {
-        border-radius: 50px;
-        font-size: 15px;
-    }
+  #timer {
+    border-radius: 50px;
+    font-size: 15px;
+  }
 
-    #score {
-        border-radius: 50px;
-        font-size: 15px;
-    }
+  #score {
+    border-radius: 50px;
+    font-size: 15px;
+  }
 
 
-} 
+}
 
 @media only screen and (max-width: 600px) {
-    .answer-options {
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
-    .Question-box{
-      width: 90vw;
-    }
+  .answer-options {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
 
-    .box {
-        width: 90%;
-        height: auto;
-    }
+  .Question-box {
+    width: 90vw;
+  }
 
-    .title-bar h2 {
-        font-size: 17px;
-    }
+  .box {
+    width: 90%;
+    height: auto;
+  }
 
-    .Question {
-        font-size: 14px;
-    }
+  .title-bar h2 {
+    font-size: 17px;
+  }
 
-    .answer-options {
-        margin-top: 0px;
-    }
+  .Question {
+    font-size: 14px;
+  }
 
-    .next-button button {
-        width: 100px;
-        font-size: 12px;
-        padding: 5px;
-    }
+  .answer-options {
+    margin-top: 0px;
+  }
 
-    #timer {
-        border-radius: 50px;
-        font-size: 15px;
-    }
+  .next-button button {
+    width: 100px;
+    font-size: 12px;
+    padding: 5px;
+  }
 
-    #score {
-        border-radius: 50px;
-        font-size: 15px;
-    }
-} 
+  #timer {
+    border-radius: 50px;
+    font-size: 15px;
+  }
+
+  #score {
+    border-radius: 50px;
+    font-size: 15px;
+  }
+}
 
 /* Question-Box Container Ends here */
 
@@ -734,12 +759,13 @@ border-color:green;
 }
 
 @media only screen and (max-width: 600px) {
-  .result-container{
+  .result-container {
     width: 100vw;
   }
-  }
+}
+
 @media only screen and (max-width: 800px) {
-  .result-container{
+  .result-container {
     width: 90vw;
   }
-  }
+}
