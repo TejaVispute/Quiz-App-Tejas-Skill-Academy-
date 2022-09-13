@@ -661,10 +661,11 @@ legend {
 /* Result section Styled here */
 
 .result-container {
+  background:url(https://cdn.staticcrate.com/stock-hd/effects/footagecrate-low-poly-background-black-wall@3X.png);
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
-  width: 40vw;
+  width: 30vw;
   height: 60vh;
   background-color: whitesmoke;
   -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
@@ -680,16 +681,20 @@ legend {
 }
 
 .buttons button {
-  padding: 5px 10px;
-  border-radius: 5px;
-  border-style: hidden;
-  background-color: #0099ff;
+  padding:10px;
+  border: 1px solid #2dade2;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-left: 10px;
 }
 
 .buttons button:hover {
-  background-color: #0099ff;
-  color: white;
+  background-color: #2dade2;
+  color: whitesmoke;
 }
+
 
 .result-container h2 {
   font-family: cursive;
@@ -698,6 +703,16 @@ legend {
   width: 100%;
   text-align: center;
   padding-bottom: 7px;
+}
+
+.result-container div{
+  font-size: 20px;
+  font-family: cursive;
+  color: white;
+}
+.result-container span{
+  font-size: 20px;
+  font-family: cursive;
 }
 
 @media only screen and (max-width: 600px) {
