@@ -1,6 +1,12 @@
 // Pipes and critstrens questions change using next btn
 
 pipe.onclick = () => {
+  const val = document.querySelector(".input-val").value;
+
+  if (val == "") {
+    alert("Please enter a valid name");
+    return;
+  }
   categories.classList.remove("activeinfo");
   QuestionBox.classList.add("activeQuiz"); //for showing question section
   document.querySelector(".title-bar").innerHTML = "Pipes and Cristrens";
@@ -28,11 +34,7 @@ showQuestionpipe = (index) => {
   const question_text = document.querySelector(".Question");
 
   let qu_tag =
-    "<span>" +
-    PIPES[index].numb +
-    ". " +
-    PIPES[index].question +
-    "</span>";
+    "<span>" + PIPES[index].numb + ". " + PIPES[index].question + "</span>";
   let option_tag =
     '<span class="option">' +
     PIPES[index].option[0] +
@@ -54,7 +56,6 @@ showQuestionpipe = (index) => {
     option[i].setAttribute("onclick", "optionSelected(this)"); //adding onclick event on options
   }
 };
-
 
 function optionSelected(answer) {
   let userAns = answer.textContent;
@@ -83,4 +84,3 @@ function optionSelected(answer) {
 
   next_button.classList.add("show");
 }
-

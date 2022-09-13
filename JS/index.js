@@ -29,23 +29,18 @@ backbutton.onclick = () => {
   infobox.classList.remove("disp"); //for hiding infobox section
 };
 
-
-
 // for printing user input name on screen
 printname = () => {
   const val = document.querySelector(".input-val").value;
   if (isNaN(val)) {
     document.querySelector("#displayname").innerHTML = "Welcome " + val;
-    document.querySelector(".name").innerHTML = val;
+    document.querySelector(".name").innerHTML = "Login As : " + val;
   } else {
-    alert("Please enter a valid name");
+    alert("Please Enter a valid Name");
   }
 };
 
 // for adding question of probabilities
-
-
-
 
 // inside legend box question count increse with every click
 function queCounterprobab(index) {
@@ -65,9 +60,6 @@ function startTimer(time) {
 }
 
 // top question count increment after every next button clicked
-
-
-
 
 // Show Result Box At the end
 function showResultBox() {

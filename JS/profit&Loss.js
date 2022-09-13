@@ -1,5 +1,10 @@
-
 profit.onclick = () => {
+  const val = document.querySelector(".input-val").value;
+
+  if (val == "") {
+    alert("Please enter a valid name");
+    return;
+  }
   categories.classList.remove("activeinfo");
   QuestionBox.classList.add("activeQuiz"); //for showing question section
   document.querySelector(".title-bar").innerHTML = "PROFIT AND LOSS";
@@ -8,7 +13,6 @@ profit.onclick = () => {
   startTimer(300);
   printname();
 };
-
 
 next_button.onclick = () => {
   if (qu_count < PROFIT.length - 1) {
@@ -29,11 +33,7 @@ showQuestionprofit = (index) => {
   const question_text = document.querySelector(".Question");
 
   let qu_tag =
-    "<span>" +
-    PROFIT[index].numb +
-    ". " +
-    PROFIT[index].question +
-    "</span>";
+    "<span>" + PROFIT[index].numb + ". " + PROFIT[index].question + "</span>";
   let option_tag =
     '<span class="option">' +
     PROFIT[index].option[0] +
@@ -88,8 +88,7 @@ function optionSelectedprofit(answer) {
 // inside legend box question count increse with every click
 function queCounterprofit(index) {
   const top_question_count = QuestionBox.querySelector(".qucount");
-  let totalQuestioncount =
-    "<span>" + index + "/" + PROFIT.length + "</span>";
+  let totalQuestioncount = "<span>" + index + "/" + PROFIT.length + "</span>";
   top_question_count.innerHTML = totalQuestioncount;
 }
 

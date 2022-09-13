@@ -181,10 +181,12 @@ body {
 /* input section styled here with padding, width etc.  */
 .user-input .enter-name input[type="text"] {
   width: 30vw;
-  padding: 10px 5px;
+  padding: 12px 5px;
   margin-top: 10px;
   border: 1px solid gray;
   border-radius: 5px;
+  font-weight: bold;
+  font-size:18px ;
 }
 
 /* submit button for input section  */
@@ -196,6 +198,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bolder;
+  font-size: 18px;
   transition: all 0.3s ease-in;
 
 }
@@ -218,7 +221,7 @@ body {
 }
 
 /* bottom select category buttons styled here  */
-.btn-bottom {
+.btn-bottom{
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-evenly;
@@ -234,15 +237,17 @@ body {
 }
 
 /* 4 buttons created for question category */
-.btn-bottom button {
+.btn-bottom button{
   width: 20vw;
   height: 7vh;
   border: 1px solid #2dade2;
   padding: 10px;
-  font-weight: bolder;
+  font-weight: bold;
   border-radius: 10px;
   transition: 0.3s ease-in;
+  font-size: 18px;
 }
+
 
 /* hover effect added to the buttons */
 .btn-bottom button:hover {
@@ -452,7 +457,7 @@ body {
 }
 
 fieldset {
-  border: 3px solid rgb(98, 75, 17);
+  border: 3px solid rgb(236, 207, 133);
   text-align: justify;
   border-radius: 12px;
 
