@@ -110,31 +110,28 @@ body {
   font-weight: bold;
 }
 
-/* @media only screen and (max-width: 600px) {
-    .box {
-        width: 100vw;
-        height: auto;
+ @media only screen and (max-width: 600px) {
+    .info-box {
+        width: 90vw;
+        height: 55vh;
+        background-color: white;
     }
+    .rules p{
+      font-size: 18px;
+      padding: 0px;
+    }
+    .rules h3{
+      margin-top: 0px;
+    }
+    .heading h3{
+      font-size: 25px;
 
-    .heading h2 {
-        font-size: 18px;
     }
-
-    .rules {
-        text-align: justify;
-        font-size: 13px;
-    }
+    .btns button{
+      font-size: 16px;
+    }    
 }
 
-@media only screen and (max-width: 800px) {
-    .box {
-        width: 80vw;
-    }
-
-    .rules {
-        text-align: justify;
-    }
-} */
 
 /* information box container  Ends here*/
 
@@ -274,8 +271,8 @@ body {
 
 /* extra small device */
 /* @media only screen and (max-width: 400px) {
-    .inside-box {
-      width: 90%;
+    .categories-box {
+      width: 100%;
       height: auto;
     }
   
@@ -338,7 +335,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .categories-box {
-    width: 100vw;
+    width: 97vw;
     height: auto;
   }
 
@@ -357,8 +354,8 @@ body {
   }
 
   .user-input .enter-name input[type="text"] {
-    padding: 5px;
-    width: 50vw;
+    padding: 10px;
+    width: 70vw;
   }
 
   .submit-name button {
@@ -385,7 +382,7 @@ body {
   }
 
   .btn-bottom button {
-    width: 60vw;
+    width: 80vw;
     padding: 10px;
     font-size: 13px;
   }
@@ -398,70 +395,7 @@ body {
 
 /* media queries for mobile devices ends here */
 
-/* media queries for ipad devices starts here */
 
-@media only screen and (max-width: 900px) {
-  .categories-box {
-    width: 80%;
-    height: auto;
-  }
-
-  .logo img {
-    width: 70px;
-    object-fit: cover;
-  }
-
-  .upper-section h2 {
-    font-size: 20px;
-  }
-
-  .user-input {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .user-input .enter-name input[type="text"] {
-    padding: 10px;
-    width: 60vw;
-  }
-
-  .submit-name button {
-    padding: 5px;
-    width: 20vw;
-  }
-
-  .heading-bottom h2 {
-    font-size: 16px;
-  }
-
-  .instructions {
-    font-size: 17px;
-  }
-
-  .line {
-    margin-top: 0px;
-    width: 80%;
-
-  }
-
-  .btn-bottom {
-    grid-template-columns: 1fr;
-    margin-bottom: 10px;
-  }
-
-  .btn-bottom button {
-    width: 60vw;
-    padding: 10px;
-    font-size: 13px;
-  }
-
-  .logo img {
-    margin-top: 10px;
-  }
-
-}
-
-/* media queries for ipad devices ends here */
 /* Categories select here */
 
 /* Question-Box Container Starts here */
