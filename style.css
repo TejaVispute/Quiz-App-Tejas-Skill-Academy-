@@ -159,6 +159,8 @@ body{
   display: flex;
 }
 
+
+
 /* input section styled here with padding, width etc.  */
 .user-input .enter-name input[type="text"] {
   width: 30vw;
@@ -176,6 +178,13 @@ body{
   border: 1px solid skyblue;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.3s ease-in;
+
+}
+.submit-name button:hover{
+  background-color: skyblue;
+  color: white;
 }
 
 /* instructions section */
@@ -455,8 +464,12 @@ body{
 /* questions of which topic */
 .title-bar {
   border-bottom: 1px solid black;
+  color: #2dade2;
   padding-bottom: 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
   text-align: center;
+  font-weight: bolder;
 }
 
 /* Timer of 10 seconds styled here */
@@ -486,6 +499,7 @@ fieldset {
   border: 2px solid rgb(236, 207, 133);
   text-align: justify;
   border-radius: 12px;
+  font-family:;
 }
 
 /* questions displayed in here */
@@ -500,6 +514,10 @@ legend {
   padding: 30px;
 }
 
+.Question span{
+  font-weight: bold;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 /* answer options container styled here*/
 .answer-options {
   margin-top: 30px;
@@ -513,12 +531,18 @@ legend {
 /* answer 4 buttons styled here */
 .answer-options span {
   border: 2px solid rgb(99, 204, 245);
-  color: rgb(51, 181, 233);
+  color: black;
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
   border-radius: 20px;
   transition: 0.3s ease-in;
+  font-weight: bolder;
+}
+
+.answer-options span:hover{
+  background-color: rgb(99, 204, 245);
+  color:black;
 }
 
 .answer-options .correctAns {
@@ -550,6 +574,7 @@ legend {
   border-radius: 10px;
   color: black;
   cursor: pointer;
+  font-weight: bolder;
   transition: all 0.2s ease-in;
   opacity: 0;
   pointer-events: none;
