@@ -88,7 +88,7 @@ body {
 
 .btns {
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 .btns button {
@@ -275,9 +275,9 @@ body {
 }
 
 /* extra small device */
-/* @media only screen and (max-width: 400px) {
+@media (min-width: 600px) and (max-width: 900px) {
     .categories-box {
-      width: 100%;
+      width: 70%;
       height: auto;
     }
   
@@ -325,7 +325,7 @@ body {
     }
   
     .btn-bottom button {
-      width: 80vw;
+      width: 60vw;
       padding: 10px;
       font-size: 12px;
     }
@@ -334,7 +334,7 @@ body {
       margin-top: 10px;
     }
   
-  } */
+  }
 
 /* for mobile device added this media query*/
 

@@ -4,7 +4,7 @@ pipe.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
   if (val == "") {
-    alert("Please enter a valid name");
+    alert("Please Select One Category");
     return;
   }
   categories.classList.remove("activeinfo");
