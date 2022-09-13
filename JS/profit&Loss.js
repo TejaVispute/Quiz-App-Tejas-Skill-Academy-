@@ -2,9 +2,9 @@
 profit.onclick = () => {
   categories.classList.remove("activeinfo");
   QuestionBox.classList.add("activeQuiz"); //for showing question section
-  document.querySelector(".title-bar").innerHTML = "profit_losses";
+  document.querySelector(".title-bar").innerHTML = "PROFIT AND LOSS";
   showQuestionprofit(0);
-  queCounter(1);
+  queCounterprofit(1);
   startTimer(300);
   printname();
 };
@@ -16,7 +16,7 @@ next_button.onclick = () => {
     qu_numb++;
     score.innerHTML = "score: " + userscore;
     showQuestionprofit(qu_count);
-    queCounter(qu_numb);
+    queCounterprofit(qu_numb);
     next_button.classList.remove("show");
   } else {
     console.log("questons are completed");
@@ -52,12 +52,12 @@ showQuestionprofit = (index) => {
   answer_options.innerHTML = option_tag;
   const option = answer_options.querySelectorAll(".option");
   for (let i = 0; i < option.length; i++) {
-    option[i].setAttribute("onclick", "optionSelected(this)"); //adding onclick event on options
+    option[i].setAttribute("onclick", "optionSelectedprofit(this)"); //adding onclick event on options
   }
 };
 
 // change probabilities questions
-function optionSelected(answer) {
+function optionSelectedprofit(answer) {
   let userAns = answer.textContent;
   let correctAns = PROFIT[qu_count].answer;
   let alloptions = answer_options.children.length;
@@ -86,7 +86,7 @@ function optionSelected(answer) {
 }
 
 // inside legend box question count increse with every click
-function queCounter(index) {
+function queCounterprofit(index) {
   const top_question_count = QuestionBox.querySelector(".qucount");
   let totalQuestioncount =
     "<span>" + index + "/" + PROFIT.length + "</span>";
@@ -94,10 +94,10 @@ function queCounter(index) {
 }
 
 // Timer of 300 seconds
-function startTimer(time) {
-  counter = setInterval(timer, 1000);
-  function timer() {
-    timecount.textContent = time;
-    time--;
-  }
-}
+// function startTimer(time) {
+//   counter = setInterval(timer, 1000);
+//   function timer() {
+//     timecount.textContent = time;
+//     time--;
+//   }
+// }
