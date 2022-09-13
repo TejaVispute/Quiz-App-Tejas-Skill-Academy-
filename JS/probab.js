@@ -2,7 +2,7 @@ probab.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
   if (val == "") {
-    alert("Please Select One Category");
+    alert("Please Enter Name Before Choosing Category");
     return;
   }
   categories.classList.remove("activeinfo");
@@ -14,10 +14,7 @@ probab.onclick = () => {
   printname();
 };
 
-let qu_count = 0;
-let qu_numb = 1;
-let counter;
-let userscore = 0;
+
 
 next_button.onclick = () => {
   if (qu_count < PROBABILITY.length - 1) {

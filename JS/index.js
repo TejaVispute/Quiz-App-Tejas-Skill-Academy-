@@ -17,6 +17,10 @@ const next_button = QuestionBox.querySelector(".btn");
 const result_box = document.querySelector(".result-container");
 const restart = document.querySelector(".restart");
 const home = document.querySelector(".home");
+let qu_count = 0;
+let qu_numb = 1;
+let counter;
+let userscore = 0;
 
 // if continue button clicked
 Continue.onclick = () => {
@@ -33,8 +37,8 @@ backbutton.onclick = () => {
 printname = () => {
   const val = document.querySelector(".input-val").value;
   if (isNaN(val)) {
-    document.querySelector("#displayname").innerHTML = "Welcome " + val;
-    document.querySelector(".name").innerHTML = "Login As : " + val;
+    document.querySelector("#displayname").innerHTML = "Welcome " + val+ " 😃";
+    document.querySelector(".name").innerHTML = "User Name : " + val ;
   } else {
     alert("Please Enter a valid Name");
   }
@@ -78,4 +82,10 @@ function showResultBox() {
   let total_time = 300 - timecount;
   time_tag = "<span>" + "Total Time Taken " + total_time + "</span>";
   timetaken.innerHTML = time_tag;
+  let correct_tag = "<span>"+ "Correct Answers Are : " +  userscore +"</span>";
+  correct.innerHTML = correct_tag;
+  let incorrect_tag = 10-userscore;
+  wrong.innerHTML =  "Wrong Answers Are : " + incorrect_tag;
+  let percentage_tag= userscore/10*100
+  Percentage.innerHTML=  "Your Percentage Are : " + percentage_tag +"%";
 }

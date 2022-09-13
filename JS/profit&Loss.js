@@ -2,7 +2,7 @@ profit.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
   if (val == "") {
-    alert("Please Select One Category");
+    alert("Please Enter Name Before Choosing Category");
     return;
   }
   categories.classList.remove("activeinfo");

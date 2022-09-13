@@ -2,7 +2,7 @@ ages.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
   if (val == "") {
-    alert("Please Select One Category");
+    alert("Please Enter Name Before Choosing Category");
     return;
   }
   categories.classList.remove("activeinfo");
@@ -60,12 +60,12 @@ function optionSelected(answer) {
   let correctAns = Ages[qu_count].answer;
   let alloptions = answer_options.children.length;
   if (userAns == correctAns) {
-    answer.classList.add("correctAns");
+    answer.classList.add("correctAns"); //if answer is correct background color of answer will be green
     userscore += 1;
-    console.log("Answer is correct"); //if answer is correct background color of answer will be green
+    console.log("Answer is correct");
   } else {
-    answer.classList.add("incorrectAns");
-    console.log("Answer is wrong"); // if answer is wrong background color will be red.
+    answer.classList.add("incorrectAns"); // if answer is wrong background color will be red.
+    console.log("Answer is wrong");
 
     for (let i = 0; i < alloptions; i++) {
       if (answer_options.children[i].textContent == correctAns) {

@@ -170,6 +170,9 @@ body {
 .upper-section h2 {
   font-size: 19px;
 }
+.upper-section h3{
+  padding: 10px;
+}
 
 /* input section targated here */
 .user-input {
