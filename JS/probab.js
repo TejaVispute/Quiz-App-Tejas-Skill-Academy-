@@ -10,11 +10,9 @@ probab.onclick = () => {
   document.querySelector(".title-bar").innerHTML = "PROBABILITY";
   showQuestion(0);
   queCounterprobab(1);
-  startTimer(300);
+  showMynum()
   printname();
 };
-
-
 
 next_button.onclick = () => {
   if (qu_count < PROBABILITY.length - 1) {
@@ -89,4 +87,11 @@ function optionSelected(answer) {
   }
 
   next_button.classList.add("show");
+}
+
+function queCounterprobab(index) {
+  const top_question_count = QuestionBox.querySelector(".qucount");
+  let totalQuestioncount =
+    "<span>" + index + "/" + PROBABILITY.length + "</span>";
+  top_question_count.innerHTML = totalQuestioncount;
 }

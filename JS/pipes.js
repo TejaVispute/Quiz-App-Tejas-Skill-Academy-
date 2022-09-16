@@ -12,7 +12,6 @@ pipe.onclick = () => {
   document.querySelector(".title-bar").innerHTML = "Pipes and Cristrens";
   showQuestionpipe(0);
   queCounter(1);
-  startTimer(300);
   printname();
 };
 
@@ -83,4 +82,12 @@ function optionSelected(answer) {
   }
 
   next_button.classList.add("show");
+}
+
+
+function queCounter(index) {
+  const top_question_count = QuestionBox.querySelector(".qucount");
+  let totalQuestioncount =
+    "<span>" + index + "/" + PIPES.length + "</span>";
+  top_question_count.innerHTML = totalQuestioncount;
 }

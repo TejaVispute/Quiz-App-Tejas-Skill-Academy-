@@ -33,35 +33,35 @@ backbutton.onclick = () => {
   infobox.classList.remove("disp"); //for hiding infobox section
 };
 
+home.addEventListener("click", () => {
+  setTimeout(() => {
+    window.location.reload(true); // Window reload at result page
+  }, 1000);
+});
+
 // for printing user input name on screen
 printname = () => {
   const val = document.querySelector(".input-val").value;
   if (isNaN(val)) {
-    document.querySelector("#displayname").innerHTML = "Welcome " + val+ " 😃";
-    document.querySelector(".name").innerHTML = "User Name : " + val ;
+    document.querySelector("#displayname").innerHTML = "Welcome " + val + " 😃";
+    document.querySelector(".name").innerHTML = "User Name : " + val;
   } else {
     alert("Please Enter a valid Name");
   }
 };
 
-// for adding question of probabilities
 
-// inside legend box question count increse with every click
-function queCounterprobab(index) {
-  const top_question_count = QuestionBox.querySelector(".qucount");
-  let totalQuestioncount =
-    "<span>" + index + "/" + PROBABILITY.length + "</span>";
-  top_question_count.innerHTML = totalQuestioncount;
-}
 
-// Timer of 300 seconds
-function startTimer(time) {
-  counter = setInterval(timer, 1000);
-  function timer() {
-    timecount.textContent = time;
-    time--;
-  }
-}
+let timeRef;
+let numb = 300;
+
+const showMynum = () => {
+  timeRef = setInterval(() => {
+    timecount.innerHTML = numb;
+      numb--;
+  }, 1000);
+};
+
 
 // top question count increment after every next button clicked
 
@@ -79,13 +79,13 @@ function showResultBox() {
   let username = document.querySelector(".input-val").value;
   nameTag = "<span>" + username + " your result is" + "</span>";
   name.innerHTML = nameTag;
-  let total_time = 300 - timecount;
-  time_tag = "<span>" + "Total Time Taken " + total_time + "</span>";
+  let total_time = Math.abs(300-numb);
+  time_tag = "<span>" + "Total Time Taken : " + total_time + " Sec"+ "</span>";
   timetaken.innerHTML = time_tag;
-  let correct_tag = "<span>"+ "Correct Answers Are : " +  userscore +"</span>";
+  let correct_tag = "<span>" + "Correct Answers Are : " + userscore + "</span>";
   correct.innerHTML = correct_tag;
-  let incorrect_tag = 10-userscore;
-  wrong.innerHTML =  "Wrong Answers Are : " + incorrect_tag;
-  let percentage_tag= userscore/10*100
-  Percentage.innerHTML=  "Your Percentage Are : " + percentage_tag +"%";
+  let incorrect_tag = 10 - userscore;
+  wrong.innerHTML = "Wrong Answers Are : " + incorrect_tag;
+  let percentage_tag = (userscore / 10) * 100;
+  Percentage.innerHTML = "Your Percentage Are : " + percentage_tag + "%";
 }
