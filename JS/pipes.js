@@ -1,5 +1,6 @@
-// Pipes and critstrens questions change using next btn
 
+
+// onclick pipe it checks user have provided their name or not
 pipe.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -15,46 +16,21 @@ pipe.onclick = () => {
   printname();
 };
 
-next_button.onclick = () => {
+next_button_pipe.onclick = () => {
   if (qu_count < PIPES.length - 1) {
     qu_count++;
     qu_numb++;
-    score.innerHTML = "score: " + userscore;
+    score.innerHTML = "score : " + userscore;
     showQuestionpipe(qu_count);
     queCounter(qu_numb);
-    next_button.classList.remove("show");
+    next_button_pipe.classList.remove("show");
   } else {
     console.log("questons are completed");
     showResultBox();
   }
 };
 
-showQuestionpipe = (index) => {
-  const question_text = document.querySelector(".Question");
 
-  let qu_tag =
-    "<span>" + PIPES[index].numb + ". " + PIPES[index].question + "</span>";
-  let option_tag =
-    '<span class="option">' +
-    PIPES[index].option[0] +
-    "</span>" +
-    '<span class="option">' +
-    PIPES[index].option[1] + //add loops here
-    "</span>" +
-    '<span class="option">' +
-    PIPES[index].option[2] +
-    "</span>" +
-    '<span class="option">' +
-    PIPES[index].option[3] +
-    "</span>";
-
-  question_text.innerHTML = qu_tag;
-  answer_options.innerHTML = option_tag;
-  const option = answer_options.querySelectorAll(".option");
-  for (let i = 0; i < option.length; i++) {
-    option[i].setAttribute("onclick", "optionSelected(this)"); //adding onclick event on options
-  }
-};
 
 function optionSelected(answer) {
   let userAns = answer.textContent;
@@ -81,13 +57,13 @@ function optionSelected(answer) {
     answer_options.children[i].classList.add("disabled");
   }
 
-  next_button.classList.add("show");
+  next_button_pipe.classList.add("show");
 }
 
 
 function queCounter(index) {
   const top_question_count = QuestionBox.querySelector(".qucount");
   let totalQuestioncount =
-    "<span>" + index + "/" + PIPES.length + "</span>";
+    "<span>" + index + "/" + 10 + "</span>";
   top_question_count.innerHTML = totalQuestioncount;
 }

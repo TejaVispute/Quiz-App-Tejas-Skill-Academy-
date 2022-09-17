@@ -74,7 +74,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   color: brown;
-  padding:10px;
+  padding: 10px;
   font-family: cursive;
   margin-top: 15px;
 }
@@ -110,26 +110,30 @@ body {
   font-weight: bold;
 }
 
- @media only screen and (max-width: 600px) {
-    .info-box {
-        width: 90vw;
-        height: 55vh;
-        background-color: white;
-    }
-    .rules p{
-      font-size: 18px;
-      padding: 0px;
-    }
-    .rules h3{
-      margin-top: 0px;
-    }
-    .heading h3{
-      font-size: 25px;
+@media only screen and (max-width: 600px) {
+  .info-box {
+    width: 90vw;
+    height: 55vh;
+    background-color: white;
+  }
 
-    }
-    .btns button{
-      font-size: 16px;
-    }    
+  .rules p {
+    font-size: 18px;
+    padding: 0px;
+  }
+
+  .rules h3 {
+    margin-top: 0px;
+  }
+
+  .heading h3 {
+    font-size: 25px;
+
+  }
+
+  .btns button {
+    font-size: 16px;
+  }
 }
 
 
@@ -170,7 +174,8 @@ body {
 .upper-section h2 {
   font-size: 19px;
 }
-.upper-section h3{
+
+.upper-section h3 {
   padding: 10px;
 }
 
@@ -189,7 +194,7 @@ body {
   border: 1px solid gray;
   border-radius: 5px;
   font-weight: bold;
-  font-size:18px ;
+  font-size: 18px;
 }
 
 /* submit button for input section  */
@@ -203,12 +208,15 @@ body {
   font-weight: bolder;
   font-size: 18px;
   transition: all 0.3s ease-in;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 
 }
 
 .submit-name button:hover {
-  background-color: skyblue;
+  background-color: #2dade2;
   color: white;
+  
 }
 
 /* instructions section */
@@ -224,7 +232,7 @@ body {
 }
 
 /* bottom select category buttons styled here  */
-.btn-bottom{
+.btn-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-evenly;
@@ -240,9 +248,10 @@ body {
 }
 
 /* 4 buttons created for question category */
-.btn-bottom button{
+.btn-bottom button {
   width: 20vw;
   height: 7vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 1px solid #2dade2;
   padding: 10px;
   font-weight: bold;
@@ -264,12 +273,14 @@ body {
 }
 
 .backbtn button {
-  padding: 5px 15px;
+  padding: 10px 15px;
   border: 1px solid #2dade2;
   border-radius: 10px;
   margin-bottom: 7px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in-out;
 }
 
 .backbtn button:hover {
@@ -279,65 +290,65 @@ body {
 
 /* extra small device */
 @media (min-width: 600px) and (max-width: 900px) {
-    .categories-box {
-      width: 70%;
-      height: auto;
-    }
-  
-    .logo img {
-      width: 30px;
-      object-fit: cover;
-    }
-  
-    .upper-section h2 {
-      font-size: 12px;
-    }
-  
-    .user-input {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .user-input .enter-name input[type="text"] {
-      padding: 8px;
-      width: 60vw;
-    }
-  
-    .submit-name button {
-      padding: 3px;
-      width: 20vw;
-    }
-  
-    .heading-bottom h2 {
-      font-size: 14px;
-    }
-  
-    .instructions {
-      font-size: 17px;
-    }
-  
-    .line {
-      margin-top: 0px;
-      width: 80%;
-  
-    }
-  
-    .btn-bottom {
-      grid-template-columns: 1fr;
-      margin-bottom: 10px;
-    }
-  
-    .btn-bottom button {
-      width: 60vw;
-      padding: 10px;
-      font-size: 12px;
-    }
-  
-    .logo img {
-      margin-top: 10px;
-    }
-  
+  .categories-box {
+    width: 70%;
+    height: auto;
   }
+
+  .logo img {
+    width: 30px;
+    object-fit: cover;
+  }
+
+  .upper-section h2 {
+    font-size: 12px;
+  }
+
+  .user-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-input .enter-name input[type="text"] {
+    padding: 8px;
+    width: 60vw;
+  }
+
+  .submit-name button {
+    padding: 3px;
+    width: 20vw;
+  }
+
+  .heading-bottom h2 {
+    font-size: 14px;
+  }
+
+  .instructions {
+    font-size: 17px;
+  }
+
+  .line {
+    margin-top: 0px;
+    width: 80%;
+
+  }
+
+  .btn-bottom {
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+  }
+
+  .btn-bottom button {
+    width: 60vw;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .logo img {
+    margin-top: 10px;
+  }
+
+}
 
 /* for mobile device added this media query*/
 
@@ -403,9 +414,6 @@ body {
 
 /* media queries for mobile devices ends here */
 
-
-/* Categories select here */
-
 /* Question-Box Container Starts here */
 .Question-box {
   opacity: 0;
@@ -445,7 +453,8 @@ body {
 
 /* score of correct questions */
 #score {
-  border: 1px solid grey;
+  font-weight: bolder;
+  border: 2px solid black;
   padding: 10px;
   border-radius: 20px;
 }
@@ -545,6 +554,11 @@ legend {
 }
 
 .next-button button.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.next-button2 button.show {
   opacity: 1;
   pointer-events: auto;
 }
@@ -680,7 +694,7 @@ legend {
 }
 
 .buttons button {
-  padding:10px;
+  padding: 10px;
   border: 1px solid #2dade2;
   border-radius: 10px;
   font-size: 20px;
@@ -703,12 +717,12 @@ legend {
   padding-bottom: 7px;
 }
 
-.result-container div{
+.result-container div {
   font-size: 20px;
   font-family: cursive;
 }
 
-.result-container span{
+.result-container span {
   font-size: 20px;
   font-family: cursive;
 }
