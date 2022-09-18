@@ -91,12 +91,3 @@ function queCounterprofit(index) {
   let totalQuestioncount = "<span>" + index + "/" + PROFIT.length + "</span>";
   top_question_count.innerHTML = totalQuestioncount;
 }
-
-// Timer of 300 seconds
-// function startTimer(time) {
-//   counter = setInterval(timer, 1000);
-//   function timer() {
-//     timecount.textContent = time;
-//     time--;
-//   }
-// }

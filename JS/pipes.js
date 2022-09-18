@@ -1,6 +1,3 @@
-
-
-// onclick pipe it checks user have provided their name or not
 pipe.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -10,29 +7,58 @@ pipe.onclick = () => {
   }
   categories.classList.remove("activeinfo");
   QuestionBox.classList.add("activeQuiz"); //for showing question section
-  document.querySelector(".title-bar").innerHTML = "Pipes and Cristrens";
+  document.querySelector(".title-bar").innerHTML = "PIPE AND CRISTRENS";
   showQuestionpipe(0);
-  queCounter(1);
+  queCounterprofit(1);
+  showMynum();
   printname();
 };
 
-next_button_pipe.onclick = () => {
+
+next_button.onclick = () => {
   if (qu_count < PIPES.length - 1) {
     qu_count++;
     qu_numb++;
-    score.innerHTML = "score : " + userscore;
-    showQuestionpipe(qu_count);
-    queCounter(qu_numb);
-    next_button_pipe.classList.remove("show");
+    score.innerHTML = "score: " + userscore;
+    showQuestionprofit(qu_count);
+    queCounterprofit(qu_numb);
+    next_button.classList.remove("show");
   } else {
     console.log("questons are completed");
     showResultBox();
   }
 };
 
+// accessed questions and print here of PROFIT
+showQuestionpipe = (index) => {
+  const question_text = document.querySelector(".Question");
 
+  let qu_tag =
+    "<span>" + PIPES[index].numb + ". " + PIPES[index].question + "</span>";
+  let option_tag =
+    '<span class="option">' +
+    PIPES[index].option[0] +
+    "</span>" +
+    '<span class="option">' +
+    PIPES[index].option[1] + //add loops here
+    "</span>" +
+    '<span class="option">' +
+    PIPES[index].option[2] +
+    "</span>" +
+    '<span class="option">' +
+    PIPES[index].option[3] +
+    "</span>";
 
-function optionSelected(answer) {
+  question_text.innerHTML = qu_tag;
+  answer_options.innerHTML = option_tag;
+  const option = answer_options.querySelectorAll(".option");
+  for (let i = 0; i < option.length; i++) {
+    option[i].setAttribute("onclick", "optionSelectedprofit(this)"); //adding onclick event on options
+  }
+};
+
+// change probabilities questions
+function optionSelectedprofit(answer) {
   let userAns = answer.textContent;
   let correctAns = PIPES[qu_count].answer;
   let alloptions = answer_options.children.length;
@@ -57,13 +83,12 @@ function optionSelected(answer) {
     answer_options.children[i].classList.add("disabled");
   }
 
-  next_button_pipe.classList.add("show");
+  next_button.classList.add("show");
 }
 
-
-function queCounter(index) {
+// inside legend box question count increse with every click
+function queCounterprofit(index) {
   const top_question_count = QuestionBox.querySelector(".qucount");
-  let totalQuestioncount =
-    "<span>" + index + "/" + 10 + "</span>";
+  let totalQuestioncount = "<span>" + index + "/" + PIPES.length + "</span>";
   top_question_count.innerHTML = totalQuestioncount;
 }
