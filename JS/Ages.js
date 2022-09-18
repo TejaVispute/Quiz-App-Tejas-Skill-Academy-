@@ -1,3 +1,7 @@
+const ages = document.querySelector(".ages");
+let next3 = document.querySelector("#next3");
+
+
 ages.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -9,19 +13,21 @@ ages.onclick = () => {
   QuestionBox.classList.add("activeQuiz"); //for showing question section
   document.querySelector(".title-bar").innerHTML = "Ages";
   showQuestionages(0);
-  queCounter(1);
-  startTimer(300);
+  queCounterage(1);
   printname();
+  showMynum();
 };
 
-next_button.onclick = () => {
+next3.onclick = () => {
   if (qu_count < Ages.length - 1) {
     qu_count++;
     qu_numb++;
     score.innerHTML = "score: " + userscore;
     showQuestionages(qu_count);
-    queCounter(qu_numb);
+    queCounterage(qu_numb);
     next_button.classList.remove("show");
+    next2.classList.remove("show");
+    next3.classList.remove("show");
   } else {
     console.log("questons are completed");
     showResultBox();
@@ -51,11 +57,11 @@ showQuestionages = (index) => {
   answer_options.innerHTML = option_tag;
   const option = answer_options.querySelectorAll(".option");
   for (let i = 0; i < option.length; i++) {
-    option[i].setAttribute("onclick", "optionSelected(this)"); //adding onclick event on options
+    option[i].setAttribute("onclick", "optionSelectedages(this)"); //adding onclick event on options
   }
 };
 
-function optionSelected(answer) {
+function optionSelectedages(answer) {
   let userAns = answer.textContent;
   let correctAns = Ages[qu_count].answer;
   let alloptions = answer_options.children.length;
@@ -80,5 +86,12 @@ function optionSelected(answer) {
     answer_options.children[i].classList.add("disabled");
   }
 
-  next_button.classList.add("show");
+  next3.classList.add("show");
+}
+
+
+function queCounterage(index) {
+  const top_question_count = QuestionBox.querySelector(".qucount");
+  let totalQuestioncount = "<span>" + index + "/" + PIPES.length + "</span>";
+  top_question_count.innerHTML = totalQuestioncount;
 }

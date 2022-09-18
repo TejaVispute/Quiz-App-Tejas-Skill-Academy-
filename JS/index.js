@@ -4,9 +4,6 @@ const Continue = document.querySelector("#continue");
 const categories = document.querySelector(".categories-box");
 const backbutton = document.querySelector(".backbtn button");
 const probab = document.querySelector(".probab");
-
-const ages = document.querySelector(".ages");
-const profit = document.querySelector(".profit_loss");
 const QuestionBox = document.querySelector(".Question-box");
 let answer_options = document.querySelector(".answer-options");
 const timecount = document.querySelector("#timer");
@@ -74,23 +71,15 @@ function showResultBox() {
   const wrong = document.querySelector(".wrong");
   const Percentage = document.querySelector(".Percentage");
   let username = document.querySelector(".input-val").value;
-  nameTag =
-    "<span>" + "<b>" + username + "</b>" + " your result is" + "</span>";
+  nameTag ="<span>" + "<strong>" + username + "</strong>" + " your result is" + "</span>";
   name.innerHTML = nameTag;
   let total_time = Math.abs(300 - numb);
-  time_tag =
-    "<span>" +
-    "Total Time Taken : " +
-    "<b>" +
-    total_time +
-    "</b>" +
-    " Sec" +
-    "</span>";
+  time_tag ="<span>" +"Total Time Taken : " +"<strong>" +total_time +"</strong>" +" Sec" +"</span>";
   timetaken.innerHTML = time_tag;
-  let correct_tag = "<span>" + "Correct Answers Are : " + userscore + "</span>";
+  let correct_tag = "<span>" + "Correct Answers Are : " + '<strong>'+userscore+'</strong>' + "</span>";
   correct.innerHTML = correct_tag;
   let incorrect_tag = 10 - userscore;
-  wrong.innerHTML = "Wrong Answers Are : " + incorrect_tag;
+  wrong.innerHTML = "Wrong Answers Are : " +'<strong>'+ incorrect_tag+'</strong>';
   let percentage_tag = (userscore / 10) * 100;
-  Percentage.innerHTML = "Your Percentage Are : " + percentage_tag + "%";
-}
+  Percentage.innerHTML = "Your Percentage Are : " +'<strong>' +percentage_tag+'</strong>' + "%";
+};

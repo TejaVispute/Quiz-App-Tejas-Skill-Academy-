@@ -1,3 +1,6 @@
+const profit = document.querySelector(".profit_loss");
+let next4 = document.querySelector("#next4");
+
 profit.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -10,11 +13,11 @@ profit.onclick = () => {
   document.querySelector(".title-bar").innerHTML = "PROFIT AND LOSS";
   showQuestionprofit(0);
   queCounterprofit(1);
-  startTimer(300);
+  showMynum();
   printname();
 };
 
-next_button.onclick = () => {
+next4.onclick = () => {
   if (qu_count < PROFIT.length - 1) {
     qu_count++;
     qu_numb++;
@@ -22,6 +25,9 @@ next_button.onclick = () => {
     showQuestionprofit(qu_count);
     queCounterprofit(qu_numb);
     next_button.classList.remove("show");
+    next2.classList.remove("show");
+    next3.classList.remove("show");
+    next4.classList.remove("show");
   } else {
     console.log("questons are completed");
     showResultBox();
@@ -82,7 +88,7 @@ function optionSelectedprofit(answer) {
     answer_options.children[i].classList.add("disabled");
   }
 
-  next_button.classList.add("show");
+  next4.classList.add("show");
 }
 
 // inside legend box question count increse with every click

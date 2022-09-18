@@ -37,13 +37,13 @@ body {
 /* information box container  starts here*/
 .info-box {
   width: 600px;
-  height: 350px;
+  height: 330px;
   border: 0.5px solid grey;
   background-color: whitesmoke;
   -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
   -moz-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
   box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
-  border-radius: 10px;
+  border-radius: 20px;
   border-radius: 10px;
   transition: all 0.5s ease;
 }
@@ -92,7 +92,7 @@ body {
 }
 
 .btns button {
-  padding: 10px;
+  padding: 7px;
   border: 1px solid #2dade2;
   border-radius: 15px;
   transition: all 0.3s ease;
@@ -193,7 +193,6 @@ body {
   margin-top: 10px;
   border: 1px solid gray;
   border-radius: 5px;
-  font-weight: bold;
   font-size: 18px;
 }
 
@@ -203,10 +202,10 @@ body {
   margin-left: 5px;
   padding: 10px 20px;
   border: 1px solid skyblue;
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 16px;
   transition: all 0.3s ease-in;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -251,13 +250,13 @@ body {
 .btn-bottom button {
   width: 20vw;
   height: 7vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:sans-serif;
   border: 1px solid #2dade2;
   padding: 10px;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 10px;
   transition: 0.3s ease-in;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
@@ -273,7 +272,7 @@ body {
 }
 
 .backbtn button {
-  padding: 10px 15px;
+  padding: 7px 10px;
   border: 1px solid #2dade2;
   border-radius: 10px;
   margin-bottom: 7px;
@@ -420,7 +419,7 @@ body {
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
   width: 60vw;
-  height: auto;
+  height:auto;
   border: 2px solid #ccc;
   padding: 30px;
   background-color: white;
@@ -539,9 +538,11 @@ legend {
   display: flex;
   justify-content: center;
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 #next {
+  position: absolute;
   padding: 10px 20px;
   border: 1px solid rgb(99, 204, 245);
   border-radius: 10px;
@@ -557,12 +558,10 @@ legend {
   opacity: 1;
   pointer-events: auto;
 }
-#next2.show {
-  opacity: 1;
-  pointer-events: auto;
-}
+
 
 #next2 {
+  position: absolute;
   padding: 10px 20px;
   border: 1px solid rgb(99, 204, 245);
   border-radius: 10px;
@@ -573,13 +572,57 @@ legend {
   opacity: 0;
   pointer-events: none;
 }
+#next2.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
+#next3 {
+  position: absolute;
+  padding: 10px 20px;
+  border: 1px solid rgb(99, 204, 245);
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+#next3.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+#next4 {
+  position: absolute;
+  padding: 10px 20px;
+  border: 1px solid rgb(99, 204, 245);
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+#next4.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 #next:hover {
   background-color: rgb(99, 204, 245);
   color: whitesmoke;
 }
 #next2:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+#next3:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+#next4:hover {
   background-color: rgb(99, 204, 245);
   color: whitesmoke;
 }
@@ -694,7 +737,7 @@ legend {
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
-  width: 30vw;
+  width: 25vw;
   height: 60vh;
   background-color: whitesmoke;
   -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
@@ -710,12 +753,12 @@ legend {
 }
 
 .buttons button {
-  padding: 10px;
+  padding: 9px;
   border: 1px solid #2dade2;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 18px;
+  font-size: 14px;
   transition: all 0.3s ease;
-  margin-left: 10px;
+  font-weight: bold;
 }
 
 .buttons button:hover {
@@ -735,12 +778,15 @@ legend {
 
 .result-container div {
   font-size: 20px;
-  font-family: cursive;
+font-family: serif;
+  
 }
 
 .result-container span {
   font-size: 20px;
-  font-family: cursive;
+font-family: serif;
+
+
 }
 
 @media only screen and (max-width: 600px) {
