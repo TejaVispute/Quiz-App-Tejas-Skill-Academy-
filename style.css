@@ -541,7 +541,7 @@ legend {
   margin-top: 15px;
 }
 
-.next-button button {
+#next {
   padding: 10px 20px;
   border: 1px solid rgb(99, 204, 245);
   border-radius: 10px;
@@ -553,17 +553,33 @@ legend {
   pointer-events: none;
 }
 
-.next-button button.show {
+#next.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+#next2.show {
   opacity: 1;
   pointer-events: auto;
 }
 
-.next-button2 button.show {
-  opacity: 1;
-  pointer-events: auto;
+#next2 {
+  padding: 10px 20px;
+  border: 1px solid rgb(99, 204, 245);
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.next-button button:hover {
+
+#next:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+#next2:hover {
   background-color: rgb(99, 204, 245);
   color: whitesmoke;
 }

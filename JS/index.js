@@ -4,7 +4,7 @@ const Continue = document.querySelector("#continue");
 const categories = document.querySelector(".categories-box");
 const backbutton = document.querySelector(".backbtn button");
 const probab = document.querySelector(".probab");
-const pipe = document.querySelector(".pipe");
+
 const ages = document.querySelector(".ages");
 const profit = document.querySelector(".profit_loss");
 const QuestionBox = document.querySelector(".Question-box");
@@ -14,7 +14,6 @@ const score = document.querySelector("#score");
 const result = document.querySelector(".result-container");
 let username = document.querySelector(".input-val").value;
 const next_button = QuestionBox.querySelector("#next");
-const next_button_pipe = QuestionBox.querySelector("#next2");
 const result_box = document.querySelector(".result-container");
 const restart = document.querySelector(".restart");
 const home = document.querySelector(".home");

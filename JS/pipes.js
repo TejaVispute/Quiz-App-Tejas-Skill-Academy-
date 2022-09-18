@@ -1,3 +1,5 @@
+const pipe = document.querySelector(".pipe");
+let next2 = document.querySelector("#next2");
 pipe.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -14,15 +16,15 @@ pipe.onclick = () => {
   printname();
 };
 
-
-next_button.onclick = () => {
+next2.onclick = () => {
   if (qu_count < PIPES.length - 1) {
     qu_count++;
     qu_numb++;
     score.innerHTML = "score: " + userscore;
-    showQuestionprofit(qu_count);
+    showQuestionpipe(qu_count);
     queCounterprofit(qu_numb);
     next_button.classList.remove("show");
+    next2.classList.remove("show");
   } else {
     console.log("questons are completed");
     showResultBox();
@@ -53,12 +55,12 @@ showQuestionpipe = (index) => {
   answer_options.innerHTML = option_tag;
   const option = answer_options.querySelectorAll(".option");
   for (let i = 0; i < option.length; i++) {
-    option[i].setAttribute("onclick", "optionSelectedprofit(this)"); //adding onclick event on options
+    option[i].setAttribute("onclick", "optionSelectedpipe(this)"); //adding onclick event on options
   }
 };
 
 // change probabilities questions
-function optionSelectedprofit(answer) {
+function optionSelectedpipe(answer) {
   let userAns = answer.textContent;
   let correctAns = PIPES[qu_count].answer;
   let alloptions = answer_options.children.length;
@@ -83,7 +85,7 @@ function optionSelectedprofit(answer) {
     answer_options.children[i].classList.add("disabled");
   }
 
-  next_button.classList.add("show");
+  next2.classList.add("show");
 }
 
 // inside legend box question count increse with every click
