@@ -1,7 +1,7 @@
 const ages = document.querySelector(".ages");
 let next3 = document.querySelector("#next3");
 
-
+// on click ages section this function will be executed
 ages.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -18,6 +18,8 @@ ages.onclick = () => {
   showMynum();
 };
 
+
+// This button will work only for changing questins of ages
 next3.onclick = () => {
   if (qu_count < Ages.length - 1) {
     qu_count++;
@@ -34,6 +36,7 @@ next3.onclick = () => {
   }
 };
 
+// This section is for displaying questions related Ages.
 showQuestionages = (index) => {
   const question_text = document.querySelector(".Question");
 
@@ -61,6 +64,8 @@ showQuestionages = (index) => {
   }
 };
 
+
+// This section compares answer of user selected with correct answer
 function optionSelectedages(answer) {
   let userAns = answer.textContent;
   let correctAns = Ages[qu_count].answer;
@@ -90,6 +95,7 @@ function optionSelectedages(answer) {
 }
 
 
+// This section changes question count on the top of question
 function queCounterage(index) {
   const top_question_count = QuestionBox.querySelector(".qucount");
   let totalQuestioncount = "<span>" + index + "/" + PIPES.length + "</span>";

@@ -1,5 +1,7 @@
 const pipe = document.querySelector(".pipe");
 let next2 = document.querySelector("#next2");
+
+// on click of pipe categorie this function will be executed
 pipe.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -16,6 +18,8 @@ pipe.onclick = () => {
   printname();
 };
 
+
+// This next2 button will work only for changing next question of pipe
 next2.onclick = () => {
   if (qu_count < PIPES.length - 1) {
     qu_count++;
@@ -31,7 +35,7 @@ next2.onclick = () => {
   }
 };
 
-// accessed questions and print here of PROFIT
+// accessed questions and print here of Pipes
 showQuestionpipe = (index) => {
   const question_text = document.querySelector(".Question");
 
@@ -42,7 +46,7 @@ showQuestionpipe = (index) => {
     PIPES[index].option[0] +
     "</span>" +
     '<span class="option">' +
-    PIPES[index].option[1] + //add loops here
+    PIPES[index].option[1] + 
     "</span>" +
     '<span class="option">' +
     PIPES[index].option[2] +

@@ -1,6 +1,7 @@
 const profit = document.querySelector(".profit_loss");
 let next4 = document.querySelector("#next4");
 
+// on click on profit and loss section this function will be executed
 profit.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -17,6 +18,7 @@ profit.onclick = () => {
   printname();
 };
 
+// This next button will work only for profit question change
 next4.onclick = () => {
   if (qu_count < PROFIT.length - 1) {
     qu_count++;
@@ -45,7 +47,7 @@ showQuestionprofit = (index) => {
     PROFIT[index].option[0] +
     "</span>" +
     '<span class="option">' +
-    PROFIT[index].option[1] + //add loops here
+    PROFIT[index].option[1] + 
     "</span>" +
     '<span class="option">' +
     PROFIT[index].option[2] +

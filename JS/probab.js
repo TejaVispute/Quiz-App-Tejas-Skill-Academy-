@@ -1,3 +1,4 @@
+// when click on probablity section this code will be executed
 probab.onclick = () => {
   const val = document.querySelector(".input-val").value;
 
@@ -14,6 +15,7 @@ probab.onclick = () => {
   printname();
 };
 
+// with the help of this nextbutton it changes probablity related questions
 next_button.onclick = () => {
   if (qu_count < PROBABILITY.length - 1) {
     qu_count++;
@@ -60,7 +62,7 @@ showQuestion = (index) => {
   }
 };
 
-// change probabilities questions
+// This function will check either answer is right or wrong
 function optionSelected(answer) {
   let userAns = answer.textContent;
   let correctAns = PROBABILITY[qu_count].answer;
@@ -89,6 +91,8 @@ function optionSelected(answer) {
   next_button.classList.add("show");
 }
 
+
+// on the top of question question count will change from here
 function queCounterprobab(index) {
   const top_question_count = QuestionBox.querySelector(".qucount");
   let totalQuestioncount =
