@@ -67,7 +67,7 @@ body {
 
 .rules {
   width: 100%;
-  padding: 15px;
+  padding: 20px;
 }
 
 .rules h3 {
@@ -77,10 +77,11 @@ body {
   padding: 10px;
   font-family: cursive;
   margin-top: 15px;
+
 }
 
 .rules p {
-  margin-top: 10px;
+  margin-top: 7px;
   margin-bottom: 10px;
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -113,26 +114,27 @@ body {
 @media only screen and (max-width: 600px) {
   .info-box {
     width: 90vw;
-    height: 55vh;
+    height: 300px;
     background-color: white;
   }
 
   .rules p {
-    font-size: 18px;
+    font-size: 12px;
     padding: 0px;
   }
 
   .rules h3 {
-    margin-top: 0px;
+    margin-top: 15px;
+    font-size: 14px;
   }
 
   .heading h3 {
-    font-size: 25px;
+    font-size: 18px;
 
   }
 
   .btns button {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 
@@ -176,7 +178,7 @@ body {
 }
 
 .upper-section h3 {
-  padding: 10px;
+  padding: 15px;
 }
 
 /* input section targated here */
@@ -191,7 +193,7 @@ body {
   width: 30vw;
   padding: 12px 5px;
   margin-top: 10px;
-  border: 1px solid gray;
+  border: 2px solid #2dade2;
   border-radius: 5px;
   font-size: 18px;
 }
@@ -201,7 +203,7 @@ body {
   margin-top: 10px;
   margin-left: 5px;
   padding: 10px 20px;
-  border: 1px solid skyblue;
+  border: 2px solid #2dade2;
   border-radius: 7px;
   cursor: pointer;
   font-weight: bolder;
@@ -251,7 +253,7 @@ body {
   width: 20vw;
   height: 7vh;
   font-family:sans-serif;
-  border: 1px solid #2dade2;
+  border: 3px solid #2dade2;
   padding: 10px;
   font-weight: 700;
   border-radius: 10px;
@@ -273,7 +275,7 @@ body {
 
 .backbtn button {
   padding: 7px 10px;
-  border: 1px solid #2dade2;
+  border: 2px solid #2dade2;
   border-radius: 10px;
   margin-bottom: 7px;
   font-size: 18px;
@@ -302,7 +304,6 @@ body {
   .upper-section h2 {
     font-size: 12px;
   }
-
   .user-input {
     display: flex;
     flex-direction: column;
@@ -453,7 +454,7 @@ body {
 /* score of correct questions */
 #score {
   font-weight: bolder;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 10px;
   border-radius: 20px;
 }
@@ -477,7 +478,7 @@ fieldset {
 /* questions displayed in here */
 legend {
   padding: 10px;
-  border: 2px solid rgb(236, 207, 133);
+  border: 3px solid rgb(236, 207, 133);
   border-radius: 30px;
   text-align: center;
 }
@@ -503,7 +504,7 @@ legend {
 
 /* answer 4 buttons styled here */
 .answer-options span {
-  border: 2px solid rgb(99, 204, 245);
+  border: 3px solid rgb(99, 204, 245);
   color: black;
   border-radius: 10px;
   padding: 10px;
@@ -543,8 +544,8 @@ legend {
 
 #next {
   position: absolute;
-  padding: 10px 20px;
-  border: 1px solid rgb(99, 204, 245);
+  padding: 7px;
+  border: 2px solid rgb(99, 204, 245);
   border-radius: 10px;
   color: black;
   cursor: pointer;
@@ -773,7 +774,8 @@ legend {
   border-bottom: 0.1px solid grey;
   width: 100%;
   text-align: center;
-  padding-bottom: 7px;
+  padding-bottom: 10px;
+  font-size: 30px;
 }
 
 .result-container div {
@@ -793,6 +795,10 @@ font-family: serif;
   .result-container {
     width: 100vw;
   }
+}
+
+.result-container h2 {
+  font-size: 25px;
 }
 
 @media only screen and (max-width: 800px) {
