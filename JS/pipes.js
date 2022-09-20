@@ -24,6 +24,7 @@ next2.onclick = () => {
   if (qu_count < PIPES.length - 1) {
     qu_count++;
     qu_numb++;
+    count++;
     score.innerHTML = "score: " + userscore;
     showQuestionpipe(qu_count);
     queCounterprofit(qu_numb);

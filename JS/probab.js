@@ -26,6 +26,7 @@ next_button.onclick = () => {
   if (qu_count < PROBABILITY.length - 1) {
     qu_count++;
     qu_numb++;
+    count++;
     score.innerHTML = "score: " + userscore;
     showQuestion(qu_count);
     queCounterprobab(qu_numb);

@@ -127,12 +127,12 @@ body {
   }
 
   .rules p {
-    font-size: 12px;
+    font-size: 14px;
     padding: 0px;
   }
 
   .rules h3 {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 17px;
   }
 
@@ -227,7 +227,7 @@ body {
 .submit-name button:hover {
   background-color: #2dade2;
   color: white;
-  
+
 }
 
 /* instructions section */
@@ -262,7 +262,7 @@ body {
 .btn-bottom button {
   width: 20vw;
   height: 7vh;
-  font-family:sans-serif;
+  font-family: sans-serif;
   border: 2px solid #2dade2;
   padding: 10px;
   font-weight: 700;
@@ -313,6 +313,7 @@ body {
   .upper-section h2 {
     font-size: 12px;
   }
+
   .user-input {
     display: flex;
     flex-direction: column;
@@ -421,6 +422,7 @@ body {
   }
 
 }
+
 /* media queries for mobile devices ends here */
 
 
@@ -431,7 +433,7 @@ body {
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
   width: 60vw;
-  height:auto;
+  height: auto;
   border: 2px solid #ccc;
   padding: 30px;
   background-color: white;
@@ -584,6 +586,7 @@ legend {
   opacity: 0;
   pointer-events: none;
 }
+
 #next2.show {
   opacity: 1;
   pointer-events: auto;
@@ -601,10 +604,12 @@ legend {
   opacity: 0;
   pointer-events: none;
 }
+
 #next3.show {
   opacity: 1;
   pointer-events: auto;
 }
+
 #next4 {
   position: absolute;
   padding: 10px 15px;
@@ -617,6 +622,7 @@ legend {
   opacity: 0;
   pointer-events: none;
 }
+
 #next4.show {
   opacity: 1;
   pointer-events: auto;
@@ -626,14 +632,17 @@ legend {
   background-color: rgb(99, 204, 245);
   color: whitesmoke;
 }
+
 #next2:hover {
   background-color: rgb(99, 204, 245);
   color: whitesmoke;
 }
+
 #next3:hover {
   background-color: rgb(99, 204, 245);
   color: whitesmoke;
 }
+
 #next4:hover {
   background-color: rgb(99, 204, 245);
   color: whitesmoke;
@@ -791,13 +800,13 @@ legend {
 
 .result-container div {
   font-size: 20px;
-font-family: serif;
-  
+  font-family: serif;
+
 }
 
 .result-container span {
   font-size: 20px;
-font-family: serif;
+  font-family: serif;
 
 
 }

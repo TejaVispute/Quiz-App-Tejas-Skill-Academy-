@@ -18,6 +18,7 @@ let counter;
 let userscore = 0;
 let timeRef;
 let numb = 300;
+let count=1;
 
 // if continue button clicked then following code will be executed
 Continue.onclick = () => {
@@ -80,6 +81,7 @@ function showResultBox() {
   const wrong = document.querySelector(".wrong");
   const Percentage = document.querySelector(".Percentage");
   let username = document.querySelector(".input-val").value;
+  let attemp= document.querySelector(".attempts");
   nameTag =
     "<span>" +
     "<strong>" +
@@ -112,4 +114,5 @@ function showResultBox() {
   let percentage_tag = (userscore / 10) * 100;
   Percentage.innerHTML =
     "Your Percentage Are : " + "<strong>" + percentage_tag + "</strong>" + "%";
+    attemp.innerHTML= " Total Attempts: " +"<strong>" + count + "</strong>" ;
 }

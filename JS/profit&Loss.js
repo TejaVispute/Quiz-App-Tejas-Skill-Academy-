@@ -23,6 +23,7 @@ next4.onclick = () => {
   if (qu_count < PROFIT.length - 1) {
     qu_count++;
     qu_numb++;
+    count++;
     score.innerHTML = "score: " + userscore;
     showQuestionprofit(qu_count);
     queCounterprofit(qu_numb);

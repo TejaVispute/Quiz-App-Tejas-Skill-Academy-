@@ -24,6 +24,7 @@ next3.onclick = () => {
   if (qu_count < Ages.length - 1) {
     qu_count++;
     qu_numb++;
+    count++;
     score.innerHTML = "score: " + userscore;
     showQuestionages(qu_count);
     queCounterage(qu_numb);
