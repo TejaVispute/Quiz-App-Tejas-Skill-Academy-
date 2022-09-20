@@ -1,3 +1,8 @@
+// probab categorie button accessed here
+const probab = document.querySelector(".probab");
+const next_button = QuestionBox.querySelector("#next");
+
+
 // when click on probablity section this code will be executed
 probab.onclick = () => {
   const val = document.querySelector(".input-val").value;
@@ -15,7 +20,8 @@ probab.onclick = () => {
   printname();
 };
 
-// with the help of this nextbutton it changes probablity related questions
+
+// with the help of this next button it changes probablity related questions
 next_button.onclick = () => {
   if (qu_count < PROBABILITY.length - 1) {
     qu_count++;
@@ -29,6 +35,7 @@ next_button.onclick = () => {
     showResultBox();
   }
 };
+
 
 // accessed questions and print here of probability
 showQuestion = (index) => {
@@ -62,6 +69,7 @@ showQuestion = (index) => {
   }
 };
 
+
 // This function will check either answer is right or wrong
 function optionSelected(answer) {
   let userAns = answer.textContent;
@@ -82,6 +90,7 @@ function optionSelected(answer) {
       }
     }
   }
+  
 
   // once user click one option disable all other options
   for (let i = 0; i < alloptions; i++) {

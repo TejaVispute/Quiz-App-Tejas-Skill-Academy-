@@ -3,14 +3,12 @@ const infobox = document.querySelector(".info-box");
 const Continue = document.querySelector("#continue");
 const categories = document.querySelector(".categories-box");
 const backbutton = document.querySelector(".backbtn button");
-const probab = document.querySelector(".probab");
 const QuestionBox = document.querySelector(".Question-box");
 let answer_options = document.querySelector(".answer-options");
 const timecount = document.querySelector("#timer");
 const score = document.querySelector("#score");
 const result = document.querySelector(".result-container");
 let username = document.querySelector(".input-val").value;
-const next_button = QuestionBox.querySelector("#next");
 const result_box = document.querySelector(".result-container");
 const restart = document.querySelector(".restart");
 const home = document.querySelector(".home");
@@ -57,6 +55,17 @@ const showMynum = () => {
   timeRef = setInterval(() => {
     timecount.innerHTML = numb;
     numb--;
+
+    // if time is 00 then Result will be shown dyrectly.
+    if (numb == 0) {
+      QuestionBox.classList.remove("activeQuiz");
+      showResultBox();
+    }
+    // if time left is less then 3 color of timer will be red.
+    if (numb < 30) {
+      timecount.style.color= "red";
+      timecount.style.borderColor= "red";
+    }
   }, 1000);
 };
 
@@ -71,15 +80,36 @@ function showResultBox() {
   const wrong = document.querySelector(".wrong");
   const Percentage = document.querySelector(".Percentage");
   let username = document.querySelector(".input-val").value;
-  nameTag ="<span>" + "<strong>" + username + "</strong>" + " your result is" + "</span>";
+  nameTag =
+    "<span>" +
+    "<strong>" +
+    username +
+    "</strong>" +
+    " your result is" +
+    "</span>";
   name.innerHTML = nameTag;
   let total_time = Math.abs(300 - numb);
-  time_tag ="<span>" +"Total Time Taken : " +"<strong>" +total_time +"</strong>" +" Sec" +"</span>";
+  time_tag =
+    "<span>" +
+    "Total Time Taken : " +
+    "<strong>" +
+    total_time +
+    "</strong>" +
+    " Sec" +
+    "</span>";
   timetaken.innerHTML = time_tag;
-  let correct_tag = "<span>" + "Correct Answers Are : " + '<strong>'+userscore+'</strong>' + "</span>";
+  let correct_tag =
+    "<span>" +
+    "Correct Answers Are : " +
+    "<strong>" +
+    userscore +
+    "</strong>" +
+    "</span>";
   correct.innerHTML = correct_tag;
   let incorrect_tag = 10 - userscore;
-  wrong.innerHTML = "Wrong Answers Are : " +'<strong>'+ incorrect_tag+'</strong>';
+  wrong.innerHTML =
+    "Wrong Answers Are : " + "<strong>" + incorrect_tag + "</strong>";
   let percentage_tag = (userscore / 10) * 100;
-  Percentage.innerHTML = "Your Percentage Are : " +'<strong>' +percentage_tag+'</strong>' + "%";
-};
+  Percentage.innerHTML =
+    "Your Percentage Are : " + "<strong>" + percentage_tag + "</strong>" + "%";
+}
