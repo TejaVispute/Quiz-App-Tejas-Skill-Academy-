@@ -14,11 +14,11 @@ const restart = document.querySelector(".restart");
 const home = document.querySelector(".home");
 let qu_count = 0;
 let qu_numb = 1;
-let counter;
 let userscore = 0;
-let timeRef;
-let numb = 300;
-let count=1;
+let timeRef;//for set interval
+let numb = 300;//300sec timer
+let count=0;//This variable is for toral attempts by user.
+
 
 // if continue button clicked then following code will be executed
 Continue.onclick = () => {

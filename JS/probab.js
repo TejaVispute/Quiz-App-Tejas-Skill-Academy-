@@ -32,6 +32,7 @@ next_button.onclick = () => {
     queCounterprobab(qu_numb);
     next_button.classList.remove("show");
   } else {
+    count++;
     console.log("questons are completed");
     showResultBox();
   }

@@ -32,6 +32,7 @@ next3.onclick = () => {
     next2.classList.remove("show");
     next3.classList.remove("show");
   } else {
+    count++;
     console.log("questons are completed");
     showResultBox();
   }
