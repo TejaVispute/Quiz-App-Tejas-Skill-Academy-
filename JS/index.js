@@ -17,7 +17,7 @@ let qu_numb = 1;
 let userscore = 0;
 let timeRef;//for set interval
 let numb = 300;//300sec timer
-let count=0;//This variable is for toral attempts by user.
+let count = 0;//This variable is for total attempts by user.
 
 
 // if continue button clicked then following code will be executed
@@ -64,8 +64,8 @@ const showMynum = () => {
     }
     // if time left is less then 3 color of timer will be red.
     if (numb < 30) {
-      timecount.style.color= "red";
-      timecount.style.borderColor= "red";
+      timecount.style.color = "red";
+      timecount.style.borderColor = "red";
     }
   }, 1000);
 };
@@ -81,7 +81,7 @@ function showResultBox() {
   const wrong = document.querySelector(".wrong");
   const Percentage = document.querySelector(".Percentage");
   let username = document.querySelector(".input-val").value;
-  let attemp= document.querySelector(".attempts");
+  let attemp = document.querySelector(".attempts");
   nameTag =
     "<span>" +
     "<strong>" +
@@ -114,5 +114,5 @@ function showResultBox() {
   let percentage_tag = (userscore / 10) * 100;
   Percentage.innerHTML =
     "Your Percentage Are : " + "<strong>" + percentage_tag + "</strong>" + "%";
-    attemp.innerHTML= " Total Attempts: " +"<strong>" + count + "</strong>" ;
+  attemp.innerHTML = " Total Attempts: " + "<strong>" + count + "</strong>";
 }

@@ -92,7 +92,7 @@ function optionSelected(answer) {
       }
     }
   }
-  
+
 
   // once user click one option disable all other options
   for (let i = 0; i < alloptions; i++) {
