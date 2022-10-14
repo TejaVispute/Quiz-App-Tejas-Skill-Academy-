@@ -173,7 +173,7 @@ body {
   -webkit-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
   -moz-box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
   box-shadow: 7px 7px 16px 0px rgba(166, 164, 166, 1);
-  border-radius: 10px;
+  border-radius: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   transition: all 0.5s ease-in;
 }
@@ -264,10 +264,10 @@ body {
 .btn-bottom button {
   width: 20vw;
   height: 7vh;
-  font-family: sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   border: 2px solid #2dade2;
   padding: 10px;
-  font-weight: 700;
+  font-weight: bold;
   border-radius: 15px;
   transition: 0.3s ease-in;
   font-size: 16px;
